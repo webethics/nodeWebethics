@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a routerLink="create" *ngIf="!isLoggedIn()" routerLinkActive="active">
+          Signup 
+        </a> 
+		 <a routerLink="login" *ngIf="!isLoggedIn()" routerLinkActive="active">
+          | Login |
+        </a> 
+		
+		<a routerLink="forgot" *ngIf="!isLoggedIn()" routerLinkActive="active">
+          | Forgot Password |
+        </a>
+		<a routerLink="users" *ngIf="isLoggedIn()" routerLinkActive="active">
+           User Profile |
+        </a>
+		<a routerLink="album" *ngIf="isLoggedIn()" routerLinkActive="active">
+           Album
+        </a>
+		<a (click)="logout()" *ngIf="isLoggedIn()" href="javascript:void();" routerLinkActive="active" >
+          | Logout
+        </a>
+		
+      </li>    
+    </ul>
+  </div>
+</nav>

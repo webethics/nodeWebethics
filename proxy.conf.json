@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "https://salty-sierra-98606.herokuapp.com:4000",
+    "secure": false
+  }
+}
